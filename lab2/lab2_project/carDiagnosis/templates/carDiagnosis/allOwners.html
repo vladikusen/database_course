@@ -1,0 +1,13 @@
+{% extends "carDiagnosis/all.html" %}
+
+{% block modelData %}
+
+{% for owner in ownerList %}
+    <div>
+        {{ owner }}
+        <a href="{% url 'deleteOwner' %}?id={{owner.0}}">delete</a>
+        <a href="{% url 'updateOwner' %}?id={{owner.0}}">update</a>
+    </div>
+{% endfor %}
+
+{% endblock %}

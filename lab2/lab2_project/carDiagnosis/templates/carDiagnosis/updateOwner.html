@@ -1,0 +1,23 @@
+{% extends "carDiagnosis/all.html" %}
+
+{% block modelData %}
+
+<form action="", method="POST"> {% csrf_token %}
+    <!-- <label for="car_vin">Car vin: </label>
+    <input id="car_vin" type="text" name="car_vin" value="{{ car.0 }}"> -->
+    <p>{{ owner.0 }}</p>
+
+    <label for="owner_name">Owner name: </label>
+    <input id="owner_name" type="text" name="owner_name" value="{{ owner.1 }}">
+
+    <label for="owner_license">License: </label>
+    <select name="owner_license" id="owner_license">
+        {% for licenseOption in licenseOptions %}
+            <option value='{{ licenseOption }}'>{{ licenseOption }}</option>
+        {% endfor %}
+    </select>
+    
+    <input type="submit" value="submit">
+</form> 
+
+{% endblock %}

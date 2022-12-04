@@ -1,0 +1,14 @@
+{% extends "carDiagnosis/all.html" %}
+
+{% block modelData %}
+
+{% for license in licenseList %}
+    <div>
+        {{ license }}
+        <a href="{% url 'deleteLicense' %}?id={{license.0}}">delete</a>  
+        <a href="{% url 'updateLicense' %}?id={{license.0}}">update</a>  
+    </div>
+
+{% endfor %}
+
+{% endblock %}
