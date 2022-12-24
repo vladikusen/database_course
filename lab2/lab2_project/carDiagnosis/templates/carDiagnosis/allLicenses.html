@@ -2,11 +2,11 @@
 
 {% block modelData %}
 
-{% for license in licenseList %}
+{% for license in all_licences %}
     <div>
-        {{ license }}
-        <a href="{% url 'deleteLicense' %}?id={{license.0}}">delete</a>  
-        <a href="{% url 'updateLicense' %}?id={{license.0}}">update</a>  
+        {{ license }}  
+        <a href="{% url 'editLicense' license.0 %}">edit</a>
+        <a href="{% url 'deleteLicense' license.0 %}">delete</a>
     </div>
 
 {% endfor %}

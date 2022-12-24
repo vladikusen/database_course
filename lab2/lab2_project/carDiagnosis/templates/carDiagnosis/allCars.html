@@ -1,12 +1,10 @@
 {% extends "carDiagnosis/all.html" %}
 
 {% block modelData %}
-{% for car in carList %}
-    <div>
-        {{ car }}
-        <a href="{% url 'deleteCar' %}?id={{ car.0 }}">delete</a>
-        <a href="{% url 'updateCar' %}?id={{ car.0 }}">update</a>
-    </div>
+{% for car in all_cars %}
+    {{ car }}
+    <a href="{% url 'editCar' car.0 %}">edit</a>
+    <a href="{% url 'deleteCar' car.0 %}">delete</a>
 {% endfor %}
 
 {% endblock %}

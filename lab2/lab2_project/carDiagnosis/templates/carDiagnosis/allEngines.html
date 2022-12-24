@@ -2,11 +2,11 @@
 
 {% block modelData %}
 
-{% for engine in engineList %}
+{% for engine in all_engines %}
     <div>
         {{ engine }}
-        <a href="{% url 'deleteEngine' %}?id={{engine.0}} {{engine.1}}">delete</a>  
-        <a href="{% url 'updateEngine' %}?id={{engine.0}} {{engine.1}}">update</a>  
+        <a href="{% url 'editEngine' engine.0 engine.1 %}">edit</a>  
+        <a href="{% url 'deleteEngine' engine.0 engine.1 %}">delete</a>
     </div>
 
 {% endfor %}

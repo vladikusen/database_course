@@ -8,7 +8,11 @@
             }
 
             .table > div {
-                width: 35%;
+                width: 100%;
+            }
+
+            .table > div > a {
+                display: inline-block;
             }
 
             .generator {
@@ -18,89 +22,38 @@
         </style>
     </head>
     <body>
-        <div class="generator">
-            <a href="{% url 'randomData' %}">Generate Data</a>
-        </div>
-
-        <div class="generator">
-            <a href="{% url 'deleteData' %}">Delete Data</a>
-        </div>
-
-        <div class="generator">
-            <a href="{% url 'show' %}">Find by filter</a>
-        </div>
-
         <div class="table">
-            
+
             <div>
-                <a href="{% url 'allCars' %}">all cars info   </a>
-            </div>
-            
-            <div>
+                <a href="{% url 'allCars' %}">all cars info</a>
                 <a href="{% url 'addCar' %}">add car</a> 
-            </div>           
-        
-        </div>
-
-        <div class="table">
-            
             <div>
-                <a href="{% url 'allOwners' %}">all owners info</a>
-            </div>
-            
-            <div>
-                <a href="{% url 'addOwner' %}">add owner</a>
-            </div>
-
-        </div>
-
-        <div class="table">
-            
-            <div>
-                <a href="{% url 'allGasStations' %}">all gas stations info</a>
-            </div>
-
-            <div>
-                <a href="{% url 'addGasStation' %}">add gas stations</a>
-            </div>
-                        
-        </div>
-
-        <div class="table">
-            
-            <div>
-                <a href="{% url 'allEngines' %}">all engines info</a>
-            </div>
-
-            <div>
-                <a href="{% url 'addEngine' %}">add engine</a>
-            </div>
-                        
-        </div>
-
-        <div class="table">
-            
+    
             <div>
                 <a href="{% url 'allLicenses' %}">all licenses info</a>
-            </div>
-
-            <div>
                 <a href="{% url 'addLicense' %}">add license</a>
-            </div>
-                        
-        </div>
-
-        <div class="table">
-            
             <div>
-                <a href="{% url 'allGasStationCars' %}">all gas station process info</a>
-            </div>
+    
+            <div>
+                <a href="{% url 'allOwners' %}">all owners info</a>
+                <a href="{% url 'addOwner' %}">add owner</a> 
+            <div>
 
             <div>
-                <a href="{% url 'addGasStationCar' %}">add info about process</a>
-            </div>
-                        
-        </div>
+                <a href="{% url 'allEngines' %}">all engines info</a>
+                <a href="{% url 'addEngine' %}">add engine</a> 
+            <div>
 
+            <div>
+                <a href="{% url 'allGasStations' %}">all gas stations info</a>
+                <a href="{% url 'addGasStation' %}">add gas station</a> 
+            <div>
+
+                <div>
+                    <a href="{% url 'allGasStationCars' %}">all gas stations car info</a>
+                    <a href="{% url 'addGasStationCar' %}">add gas station car</a> 
+                <div>
+
+        </div>
     </body>
 </html>
