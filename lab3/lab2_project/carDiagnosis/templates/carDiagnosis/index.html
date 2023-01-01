@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+            .table {
+                display: flex;
+                justify-content: space-between;
+                width: 30%;
+            }
+
+            .table > div {
+                width: 100%;
+            }
+
+            .table > div > a {
+                display: inline-block;
+            }
+
+            .generator {
+                width: 10%;
+                margin: auto 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="table">
+
+            <div>
+                <a href="{% url 'allCars' %}">all cars info</a>
+                <a href="{% url 'addCar' %}">add car</a> 
+            <div>
+    
+            <div>
+                <a href="{% url 'allLicenses' %}">all licenses info</a>
+                <a href="{% url 'addLicense' %}">add license</a>
+            <div>
+    
+            <div>
+                <a href="{% url 'allOwners' %}">all owners info</a>
+                <a href="{% url 'addOwner' %}">add owner</a> 
+            <div>
+
+            <div>
+                <a href="{% url 'allEngines' %}">all engines info</a>
+                <a href="{% url 'addEngine' %}">add engine</a> 
+            <div>
+
+            <div>
+                <a href="{% url 'allGasStations' %}">all gas stations info</a>
+                <a href="{% url 'addGasStation' %}">add gas station</a> 
+            <div>
+
+                <div>
+                    <a href="{% url 'allGasStationCars' %}">all gas stations car info</a>
+                    <a href="{% url 'addGasStationCar' %}">add gas station car</a> 
+                <div>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+{% extends "carDiagnosis/all.html" %}
+
+{% block modelData %}
+
+{% for gasStation in all_gas_stations %}
+    <div>
+        {{ gasStation }}
+        <a href="{% url 'editGasStation' gasStation.0 %}">edit</a> 
+        <a href="{% url 'deleteGasStation' gasStation.0 %}">delete</a> 
+    </div>
+{% endfor %}
+
+{% endblock %}
